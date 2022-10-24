@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
+require('dotenv').config();
 
 const { mongoose } = require('./dbConnect.js');
 var userController = require('./controllers/userController.js');
@@ -25,7 +26,7 @@ app.use(cors({ origin: "*" }));
 
 
 // app.listen(3000, () => console.log('listening on port : 3000')); //local
-app.listen(8080, () => console.log('listening on port : 8080'));
+app.listen(process.env.PORT, () => console.log(`listening on port : ${process.env.PORT}`));
 
 
 // Router for userController into the application
@@ -37,7 +38,7 @@ app.use('/profiles', profileController);
 // Router for restaurantController into the application
 app.use('/restaurants', restaurantController);
 
-// Router for dishesController into the application
+// Router for dishesController into the applicationa
 app.use('/dishes', dishesController);
 
 // Router for orderController into the application
