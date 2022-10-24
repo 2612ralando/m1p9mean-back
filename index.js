@@ -20,9 +20,13 @@ var mailHelper = require('./controllers/mailHelper.js');
 
 var app = express();
 app.use(bodyParser.json());
-app.use(cors({ origin: "http://localhost:4200" }));
+// app.use(cors({ origin: "http://localhost:4200" })); //local
+app.use(cors({ origin: "*" }));
 
-app.listen(3000, () => console.log('listening on port : 3000'));
+
+// app.listen(3000, () => console.log('listening on port : 3000')); //local
+app.listen(8080, () => console.log('listening on port : 8080'));
+
 
 // Router for userController into the application
 app.use('/users', userController);
