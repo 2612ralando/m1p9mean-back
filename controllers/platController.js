@@ -51,8 +51,8 @@ router.get('/read/:idResto', (req, res) => {
 
 
   Plat.find({ idResto: req.params.idResto }, (error, doc) => {
-    if (!err) { res.send(doc); }
-    else { console.log('Error in Retriving Plat  :' + JSON.stringify(err, undefined, 2)); }
+    if (!error) { res.send(doc); }
+    else { console.log('Error in Retriving Plat  :' + JSON.stringify(error, undefined, 2)); }
   });
 
 
