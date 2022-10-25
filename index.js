@@ -35,5 +35,5 @@ app.use('/plat', platController);
 // app.use('/images', express.static('images')); //=> Upload Image
 
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.send('Hello World be mitsy');
 });
