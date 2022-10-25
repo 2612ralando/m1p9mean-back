@@ -40,7 +40,7 @@ router.get('/', (req, res) => {
 
 
 // Get single Plat
-router.get('read/:idResto', (req, res) => {
+router.get('/read/:idResto', (req, res) => {
   if (!ObjectId.isValid(req.params.idPlat))
     return res.status(400).send(`No record with given idPlat : ${req.params.idResto}`)
 
