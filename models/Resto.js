@@ -1,14 +1,14 @@
 var mongoose = require('mongoose');
 
-var User = mongoose.model('User', {
+var Resto = mongoose.model('Resto', {
     created_at: { type: String },
     updated_at: { type: String },
+    idResto: { type: String },
     name: { type: String },
+    adresse: { type: String },
     email: { type: String },
-    phone: { type: String },
-    password: { type: String },
-    id_profile: { type: String }
+    phoneNumber: { type: String }
 });
 module.exports = {
-    User: User
+    Resto: Resto
 };
